@@ -538,6 +538,12 @@ function checkit()
     {
         keyword = document.getElementById("keyword");
         keyword = keyword.value;
+        reg = "[a-zA-z]+://[^\\s]*";
+        urls = keyword.match(reg);
+        if(urls != null && urls.length > 0)
+        {
+            keyword = urls[0];
+        }
         if(keyword.indexOf("http://") == 0 || keyword.indexOf("https://") == 0)
         {
             //跳转
