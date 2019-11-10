@@ -39,12 +39,12 @@
     <div class="header-bar">
       <div class="container">
         <div class="bar-right ">
-          <a href="help.html">
-            <i>
-              <img src="./imgs/hot.png" alt="HOT"></i>遇到问题？这里有解决方案</a>
+          <a href="help.html" style="font-size:13px;">
+            <!--<i>
+              <img src="./imgs/hot.png" alt="HOT"></i>-->疑难解答&gt;&gt;</a>
         </div>
         <div class="bar-right ">
-            <span>播放频繁加载？请使用“高速加载”</span>
+            <span id="tips" style="font-size:13px;"></span>
         </div>
       </div>
     </div>
@@ -639,5 +639,9 @@ function jumpa()
             }
         }
     }
+    
 }
+tips = ['播放频繁加载？请使用“高速加载”','投屏观看频繁加载？请下载到手机再投屏','没有想看的电影？请百度搜【影视名+在线观看】','页面底部内容看不见？请点击上方疑难解答','遇到问题了？请在“更多精彩”给开发者留言'];
+tipspan = document.getElementById("tips");
+tipspan.innerText = tips[Math.floor(Math.random()*tips.length)];
 </script>
