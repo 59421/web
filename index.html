@@ -22,18 +22,33 @@
           </strong>
         </h1>
         <div class="primary-menus">
+          <ul class="selects">
+            <li class="" data-target="baidu-search"> <span>百度</span> </li>
+            <li data-target="google-search" class="current"> <span>google</span> </li>
+            <li data-target="uisdc2-search" class=""> <span>优设搜索</span> </li>
+            <li data-target="uiii-search" class=""> <span>优优教程网</span> </li>
+          </ul>
           <div class="cont">
-            <div class="right-link">
-              <a href="https://d.dtg8.top/" class="add_fav" target="_blank">
-                <i class="icon-heart"></i>Ctrl+D收藏本站</a>
-              <a href="https://translate.google.cn/" target="_blank">&nbsp;翻译工具</a></div>
             <div class="left-cont">
-              <form class="search" id="baidu-search" action="https://www.baidu.com/s" method="get" onsubmit="return checkit()" target="_blank">
-                <input id="keyword" style="color:#495057" type="text" name="wd" class="s" placeholder="搜索电影/输入网址直接访问">
-                <button type="submit" name="submit" class="btn">百度一下</button></form>
+              <form class="search hidden" id="baidu-search" action="https://www.baidu.com/s" method="get" target="_blank">
+                <input type="text" name="wd" class="s" value="优优教程网">
+                <button type="submit" name="submit" class="btn">百度一下</button>
+              </form>
+              <form class="search" id="google-search" action="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" name="q" class="s" value="优优教程网">
+                <button type="submit" name="submit" class="btn">Google</button>
+              </form>
+              <form class="search hidden" id="uisdc2-search" action="https://www.uisdc.com/" method="get" target="_blank">
+                <input type="text" name="s" class="s" value="优优教程网">
+                <button type="submit" name="submit" class="btn">优设搜索</button>
+              </form>
+              <form class="search hidden" id="uiii-search" action="https://uiiiuiii.com" method="get" target="_blank">
+                <input type="text" name="s" class="s" value="优优教程网">
+                <button type="submit" name="submit" class="btn">优优搜索</button>
+              </form>
             </div>
           </div>
-        </div>
+    </div>
       </div>
     </div>
     <div class="header-bar">
@@ -109,7 +124,7 @@
                       <a href="http://tv.cctv.com/m/" target="_blank">
                         <img src="./imgs/cctv.ico" alt="">
                         <h3>CCTV</h3>
-                        <p>有些电视剧还是这里方便看</p>
+                        <p>电视剧、纪实、中央节目</p>
                       </a>
                     </div>
                   </div>
@@ -118,35 +133,16 @@
                       <a href="https://ler.app/so.php" target="_blank">
                         <img src="./imgs/ler.ico" alt="">
                         <h3>乐影网</h3>
-                        <p>片源非常全（首选）</p>
+                        <p>院线电影、热门电视剧（首选）</p>
                       </a>
                     </div>
                   </div>
-                  <!--<div class="col-xs-6 col-sm-4 col-md-2">
-                    <div class="item">
-                      <a href="http://www.mvcat.com/" target="_blank">
-                        <img src="./imgs/mvcat.ico" alt="">
-                        <h3>MVCAT</h3>
-                        <p>电影推荐与搜索，请选择非知名网站播放</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-xs-6 col-sm-4 col-md-2">
-                    <div class="item">
-                      <a href="http://m.maohaha.com/" target="_blank">
-                        <img src="./imgs/maohaha.ico" alt="">
-                        <h3>猫哈哈</h3>
-                        <p>部分影视可以下载，复制链接后配合迅雷加速下载</p>
-                      </a>
-                    </div>
-                  </div>
-                  -->
                   <div class="col-xs-6 col-sm-4 col-md-2">
                     <div class="item">
                       <a href="http://m.kkkkmao.com/" target="_blank">
                         <img src="./imgs/kkkkmao.ico" alt="">
-                        <h3>最新电影</h3>
-                        <p>电影推荐</p>
+                        <h3>热门影视（一）</h3>
+                        <p>热门电影、热门电视剧（备用）</p>
                       </a>
                     </div>
                   </div>
@@ -154,8 +150,8 @@
                     <div class="item">
                       <a href="http://www.kk2w.cc" target="_blank">
                         <img src="./imgs/kkkkmao.ico" alt="">
-                        <h3>最新电影</h3>
-                        <p>前面不够，我来凑</p>
+                        <h3>热门影视（二）</h3>
+                        <p>热门电影、热门电视剧（备用）</p>
                       </a>
                     </div>
                   </div>
@@ -163,7 +159,7 @@
                     <div class="item">
                       <a href="http://m.kanmeiju.net" target="_blank">
                         <img src="./imgs/kanmeiju.ico" alt="">
-                        <h3>看美剧</h3>
+                        <h3>看美剧（一）</h3>
                         <p>要看美剧请进!（选择云播）</p>
                       </a>
                     </div>
@@ -172,7 +168,7 @@
                     <div class="item">
                       <a href="https://m.meijutt.com" target="_blank">
                         <img src="./imgs/meijutt.ico" alt="">
-                        <h3>看美剧2</h3>
+                        <h3>看美剧（二）</h3>
                         <p>前面不够，我来凑（选择云播）</p>
                       </a>
                     </div>
@@ -182,7 +178,7 @@
                       <a href="https://m.hanjutv.com" target="_blank">
                         <img src="./imgs/hanjutv.ico" alt="">
                         <h3>看韩剧</h3>
-                        <p>看韩剧，请进!（流畅）</p>
+                        <p>看韩剧，请进!</p>
                       </a>
                     </div>
                   </div>
@@ -191,7 +187,7 @@
                       <a href="http://m.milimili.tv" target="_blank">
                         <img src="./imgs/milimili.ico" alt="">
                         <h3>咪哩咪哩</h3>
-                        <p>看动画请进!（流畅）</p>
+                        <p>热门动画、二次元</p>
                       </a>
                     </div>
                   </div>
@@ -200,7 +196,7 @@
                       <a href="https://m.open.163.com/index" target="_blank">
                         <img src="./imgs/ted.jpg" alt="">
                         <h3>网易公开课</h3>
-                        <p>给自己充电的好机会！</p>
+                        <p>学习、涨姿势</p>
                       </a>
                     </div>
                   </div>
@@ -209,16 +205,7 @@
                       <a href="http://m.miguvideo.com/mgs/msite/prd/index.html" target="_blank">
                         <img src="./imgs/migu.ico" alt="">
                         <h3>咪咕视频</h3>
-                        <p>质量高，不需要客户端，赞！</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-xs-6 col-sm-4 col-md-2">
-                    <div class="item">
-                      <a href="https://music.163.com" target="_blank">
-                        <img src="./imgs/163.ico" alt="">
-                        <h3>网易云音乐</h3>
-                        <p>听听音乐撒</p>
+                        <p>类目全，质量好，内容少</p>
                       </a>
                     </div>
                   </div>
@@ -254,6 +241,15 @@
                         <img src="./imgs/douyu.png" alt="">
                         <h3>斗鱼网络直播</h3>
                         <p>爱看就看，不作评论</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a href="https://music.163.com" target="_blank">
+                        <img src="./imgs/163.ico" alt="">
+                        <h3>网易云音乐</h3>
+                        <p>听听音乐撒</p>
                       </a>
                     </div>
                   </div>
