@@ -42,10 +42,10 @@
           <a href="help.html" style="font-size:13px;">
             <!--<i>
               <img src="./imgs/hot.png" alt="HOT"></i>-->疑难解答&gt;&gt;</a>
+              <br/>
+          <span id="tips" style="font-size:13px;"></span>
         </div>
-        <div class="bar-right ">
-            <span id="tips" style="font-size:13px;"></span>
-        </div>
+        <br/>
       </div>
     </div>
     <!-- <div style="padding-left: 10px;padding-right: 10px;width: 100%;overflow: hidden;margin-bottom: -339px;">
@@ -641,7 +641,7 @@ function jumpa()
     }
     
 }
-tips = ['播放频繁加载？请使用“高速加载”','投屏观看频繁加载？请下载到手机再投屏','没有想看的电影？请百度搜【影视名+在线观看】','页面底部内容看不见？请点击上方疑难解答','遇到问题了？请在“更多精彩”给开发者留言'];
+tips = ['播放频繁加载？请使用“高速加载”','投屏观看频繁加载？请下载到手机再投屏','没有想看的电影？请百度搜【影视名+在线观看】','页面底部内容看不见？请点击上方疑难解答','遇到问题了？请在“更多精彩”给开发者留言','用着还不错？那就在“更多精彩”中分享给朋友吧','<font color=red>请帮我分享给朋友，不然我就要限制使用了</font>'];
 tipspan = document.getElementById("tips");
-tipspan.innerText = tips[Math.floor(Math.random()*tips.length)];
+tipspan.innerHTML = tips[Math.floor(Math.random()*tips.length)];
 </script>
