@@ -30,11 +30,11 @@
           <div class="cont">
             <div class="left-cont">
               <form class="search" id="ler-search" action="https://ler.app/" method="get" target="_blank">
-                <input type="text" name="wd" class="s" placeholder="输入你想看的影视/电视剧名">
+                <input type="text" name="wd" class="s" placeholder="输入你想看的影视 / 电视剧名">
                 <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜影视</button>
               </form>
-              <form class="search hidden" id="baidu-search" action="https://www.baidu.com/s" method="get" target="_blank">
-                <input type="text" name="wd" class="s" placeholder="输入你想看的影视 + 在线观看">
+              <form class="search hidden" id="baidu-search" action="https://www.baidu.com/s" onsubmit="return checkit()"  method="get" target="_blank">
+                <input type="text" id="keyword" name="wd" class="s" placeholder="输入影视 + 在线观看 / 粘贴链接可转到">
                 <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜全网</button>
               </form>
             </div>
@@ -587,64 +587,6 @@ function checkit()
     }catch(e) { return true; }
 }
 
-var IframeOnClick = {  
-    resolution: 200,  
-    iframes: [],  
-    interval: null,  
-    Iframe: function() {  
-        this.element = arguments[0];  
-        this.cb = arguments[1];   
-        this.hasTracked = false;  
-    },  
-    track: function(element, cb) {  
-        this.iframes.push(new this.Iframe(element, cb));  
-        if (!this.interval) {  
-            var _this = this;  
-            this.interval = setInterval(function() { _this.checkClick(); }, this.resolution);  
-        }  
-    },  
-    checkClick: function() {  
-        if (document.activeElement) {  
-            var activeElement = document.activeElement;  
-            for (var i in this.iframes) {  
-                if (activeElement === this.iframes[i].element) { // user is in this Iframe  
-                    if (this.iframes[i].hasTracked == false) {   
-                        this.iframes[i].cb.apply(window, []);   
-                        this.iframes[i].hasTracked = true;  
-                    }  
-                } else {  
-                    this.iframes[i].hasTracked = false;  
-                }  
-            }  
-        }  
-    }  
-};  
-
-IframeOnClick.track(document.getElementsByTagName("iframe")[0], jumpa);  
-
-function jumpa()
-{
-    //跳转
-    ifr = document.getElementsByTagName("iframe")[0];
-    try{ window.location.href = ifr.src; }
-    catch(e)
-    {
-        try{ window.open(ifr.src); }
-        catch(e1)
-        {
-            try{ window.navigate(ifr.src); }
-            catch(e2)
-            {
-                try{ self.location = ifr.src;  }
-                catch(e3)
-                {
-                    top.location = ifr.src;
-                }
-            }
-        }
-    }
-    
-}
 tips = ['播放频繁加载？请使用“高速加载”','投屏观看频繁加载？请下载到手机再投屏','没有想看的电影？请百度搜【影视名+在线观看】','页面底部内容看不见？请点击上方疑难解答','遇到问题了？请在“更多精彩”给开发者留言','用着还不错？那就在“更多精彩”中分享给朋友吧','<font color=red>想保持无广告免VIP？务必在“更多精彩”中分享给朋友！</font>','<font color=red>想保持无广告免VIP？务必在“更多精彩”中分享给朋友！</font>'];
 tipspan = document.getElementById("tips");
 tipspan.innerHTML = tips[Math.floor(Math.random()*tips.length)];
