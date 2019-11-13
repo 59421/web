@@ -23,28 +23,19 @@
         </h1>
         <div class="primary-menus">
           <ul class="selects">
-            <li class="" data-target="baidu-search"> <span>百度</span> </li>
-            <li data-target="google-search" class="current"> <span>google</span> </li>
-            <li data-target="uisdc2-search" class=""> <span>优设搜索</span> </li>
-            <li data-target="uiii-search" class=""> <span>优优教程网</span> </li>
+            <li> 搜索 </li>
+            <li data-target="ler-search" class="current"><span>搜影视</span></li>
+            <li data-target="baidu-search"><span>搜全网</span></li>
           </ul>
           <div class="cont">
             <div class="left-cont">
+              <form class="search" id="ler-search" action="https://ler.app/" method="get" target="_blank">
+                <input type="text" name="wd" class="s" value="输入你想看的影视/电视剧名">
+                <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜影视</button>
+              </form>
               <form class="search hidden" id="baidu-search" action="https://www.baidu.com/s" method="get" target="_blank">
-                <input type="text" name="wd" class="s" value="优优教程网">
-                <button type="submit" name="submit" class="btn">百度一下</button>
-              </form>
-              <form class="search" id="google-search" action="https://www.google.com/search" method="get" target="_blank">
-                <input type="text" name="q" class="s" value="优优教程网">
-                <button type="submit" name="submit" class="btn">Google</button>
-              </form>
-              <form class="search hidden" id="uisdc2-search" action="https://www.uisdc.com/" method="get" target="_blank">
-                <input type="text" name="s" class="s" value="优优教程网">
-                <button type="submit" name="submit" class="btn">优设搜索</button>
-              </form>
-              <form class="search hidden" id="uiii-search" action="https://uiiiuiii.com" method="get" target="_blank">
-                <input type="text" name="s" class="s" value="优优教程网">
-                <button type="submit" name="submit" class="btn">优优搜索</button>
+                <input type="text" name="q" class="s" value="输入你想看的影视/电视剧名">
+                <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜全网</button>
               </form>
             </div>
           </div>
