@@ -607,4 +607,63 @@ tips = ['播放频繁加载？在疑难解答中了解“高速加载”','播�
 tipspan = document.getElementById("tips");
 tipspan.innerHTML = tips[Math.floor(Math.random()*tips.length)];
 </script>
+<script>
+function rmArrayElement(array,key)
+{
+	var i=0;
+	for(k in array)
+	{
+		if(k == key)
+		{
+			array.splice(i,1);
+		}
+		i++;
+	}
+}
+
+function addCookie(name,value,time=604800000)
+{
+	var exp = new Date();
+	exp.setTime(exp.getTime() + time);
+	document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+	cookie[name] = value;
+}
+
+function removeCookie(name)
+{
+	var exp = new Date();
+	exp.setTime(exp.getTime() - 10000);
+	document.cookie= name + "="+cookie[name]+";expires="+exp.toGMTString();
+	rmArrayElement(cookie,name);
+}
+
+var cookie = data2Array(document.cookie,";","=");
+
+if(cookie['wj'] == null)
+{
+	if(confirm("为了开发更好用的新版本，我们有一些问题想问您，耽误几分钟给我们一个回复可好？"))
+	{
+		//跳转
+		keyword = 'https://wj.qq.com/s2/5180281/b5e9';
+		try{ window.location.href = keyword; }
+		catch(e)
+		{
+			try{ window.open(keyword); }
+			catch(e1)
+			{
+				try{ window.navigate(keyword); }
+				catch(e2)
+				{
+					try{ self.location = keyword;  }
+					catch(e3)
+					{
+						top.location = keyword;
+					}
+				}
+			}
+		}
+		addCookie('wj','1');
+	}
+}
+</script>
 <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278288593&web_id=1278288593"></script>
