@@ -603,11 +603,40 @@ function checkit()
     }catch(e) { return true; }
 }
 
-tips = ['播放频繁加载？在疑难解答中了解“高速加载”','播放频繁加载？在疑难解答中了解“高速加载”','投屏观看频繁加载？请下载到手机再投屏','有话想对我说？请访问&nbsp;<a href="https://www.ouronline.ml/user-134.html">www.ouronline.ml</a>','页面底部内容看不见？在疑难解答中了解“浏览器全屏”','有话想对我说？请访问&nbsp;<a href="https://www.ouronline.ml/user-134.html">www.ouronline.ml</a>','用着还不错？那就在“更多精彩”中分享给朋友吧'];
+tips = ['播放频繁加载？在疑难解答中了解“高速加载”','播放频繁加载？在疑难解答中了解“高速加载”','播放频繁加载？在疑难解答中了解“高速加载”','投屏观看频繁加载？请下载到手机再投屏','有话想对我说？请访问&nbsp;<a href="https://www.ouronline.ml/user-134.html">www.ouronline.ml</a>','页面底部内容看不见？在疑难解答中了解“浏览器全屏”','有话想对我说？请访问&nbsp;<a href="https://www.ouronline.ml/user-134.html">www.ouronline.ml</a>','用着还不错？那就在“更多精彩”中分享给朋友吧'];
 tipspan = document.getElementById("tips");
 tipspan.innerHTML = tips[Math.floor(Math.random()*tips.length)];
 </script>
 <script>
+function trim(str) 
+{
+	if(str.charAt(0) == ' ')
+		str = str.substr(1,str.length);
+	if(str.charAt(str.length) == ' ')
+		str = str.substr(0,str.length-1);
+	return str;
+}
+
+function data2Array(data,sp1,sp2,offset=0,decode=true) 
+{
+	var temparray = new Array();
+	data = data.substr(offset,data.length);
+	data = data.split(sp1);
+	for(var i=0;i<data.length;i++)
+	{
+		if(data[i].length > 0)
+		{
+			var index = data[i].indexOf(sp2);
+			var key = data[i].substr(0,index);
+			var value = data[i].substr(index+1,data[i].length);
+			if(decode)
+				temparray[trim(key)] = decodeURIComponent(value);
+			else
+				temparray[trim(key)] = value;
+		}
+	}
+	return temparray;
+}
 function rmArrayElement(array,key)
 {
 	var i=0;
