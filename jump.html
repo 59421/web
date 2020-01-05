@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Los Santos - 理想生活，在此寻欢</title>
+    <meta content="Los Santos，专注收录各种娱乐，实用，有趣的网站" name="description">
+    <meta content="有趣导航,好玩导航,娱乐导航,工作导航" name="Keywords">    
+    </head>
+
+</html>
+<script>
+	keyword = window.location.hash;
+	keyword = keyword.substr(1);
+	//跳转
+	try{ window.location.href = keyword; }
+	catch(e)
+	{
+		try{ window.open(keyword); }
+		catch(e1)
+		{
+			try{ window.navigate(keyword); }
+			catch(e2)
+			{
+				try{ self.location = keyword;  }
+				catch(e3)
+				{
+					top.location = keyword;
+				}
+			}
+		}
+	}
+</script>
+<div style="display:none;"><script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278288593&web_id=1278288593"></script></div>
