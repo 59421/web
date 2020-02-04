@@ -30,8 +30,9 @@
           </ul>
           <div class="cont">
             <div class="left-cont">
-              <form class="search" id="ler-search" action="https://m.pianku.tv/s/go.php?" method="get')" target="_blank">
-                <input type="text" name="q" class="s" placeholder="输入你想看的影视 / 电视剧名">
+              <form class="search" id="ler-search" action="http://m.tv5box.com/index.php" method="post')" target="_blank">
+                <input type="text" name="wd" class="s" placeholder="输入你想看的影视 / 电视剧名">
+				<input type="hidden" name="s" value="vod-search-name"/>
                 <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜影视</button>
               </form>
               <form class="search hidden" id="baidu-search" action="https://www.baidu.com/s" onsubmit="return checkit()"  method="get')" target="_blank">
