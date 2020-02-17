@@ -511,10 +511,10 @@ function jumpa(keyword)
 	catch(e){}
 	
 	//跳转
-	try{ window.location.href = keyword; }
+	try{ window.open(keyword);}
 	catch(e)
 	{
-		try{ window.open(keyword); }
+		try{ window.location.href = keyword; }
 		catch(e1)
 		{
 			try{ window.navigate(keyword); }
