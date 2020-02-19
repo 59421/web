@@ -14,14 +14,6 @@
   <body class="body-home body-website">
         <div class="header ">
       <div class="container">
-	  <!--
-        <h1 class="logo">
-          <strong>
-            <a href="/" title="Los santos">
-              <img src="./imgs/weblogo.jpg" alt="Los Santos"></a>
-          </strong>
-        </h1>
-		-->
         <div class="primary-menus">
           <ul class="selects">
             <li> 搜索 </li>
@@ -69,11 +61,11 @@
                 <dd>
                   <a href="#othermv" class="auto-scroll" data-offset="-20" data-speed="500">其他娱乐</a></dd>
                 <dd>
-                  <a href="#game" class="auto-scroll" data-offset="-20" data-speed="500">在线游戏</a></dd>
-                <dd>
                   <a href="#study" class="auto-scroll" data-offset="-20" data-speed="500">天天向上</a></dd>
                 <dd>
                   <a href="#other" class="auto-scroll" data-offset="-20" data-speed="500">其他有用</a></dd>
+			    <dd>
+			    <a href="#game" class="auto-scroll" data-offset="-20" data-speed="500">在线游戏</a></dd>
               </dl>
             </div>
           </div>
@@ -86,7 +78,7 @@
           <div class="col-md-11">
             <div class="part current" id="hot" data-title="影音大全">
               <h2 class="has_link ">
-                <strong>影音大全</strong></h2>
+                <strong>影音大全（下面都是宝贝）</strong></h2>
               <div class="items ">
                 <div class="row">
 				  <div class="col-xs-6 col-sm-4 col-md-2">
@@ -184,7 +176,7 @@
                       <a onclick="javascript:jumpa('http://m.miguvideo.com/mgs/msite/prd/index.html')" target="_blank">
                         <img src="./imgs/migu.ico" alt="">
                         <h3>咪咕视频</h3>
-                        <p>类目全，质量好，内容少（加载快）</p>
+                        <p>类目全，质量好，内容少（不支持投屏）</p>
                       </a>
                     </div>
                   </div>
@@ -237,6 +229,15 @@
                       </a>
                     </div>
                   </div>
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:jumpa('http://mini.tongzhong.xyz/')" target="_blank">
+                        <img src="./imgs/tongzhong.ico" alt="">
+                        <h3>三网合一听音乐</h3>
+                        <p>聚合QQ音乐、网易云音乐和虾米音乐</p>
+                      </a>
+                    </div>
+                  </div>
                   <div class="col-xs-6 col-sm-4 col-md-2">
                     <div class="item">
                       <a onclick="javascript:jumpa('https://www.veryins.com/')" target="_blank">
@@ -285,8 +286,8 @@
                     <div class="item">
                       <a onclick="javascript:jumpa('https://magi.com/')" target="_blank">
                         <img src="./imgs/magi.ico" alt="">
-                        <h3>知识搜索</h3>
-                        <p>感觉很强大的知识搜索引擎</p>
+                        <h3>信息搜索</h3>
+                        <p>在海量资讯中组织信息</p>
                       </a>
                     </div>
                   </div>
@@ -295,14 +296,49 @@
                       <a onclick="javascript:jumpa('https://www.ipaperclip.net')" target="_blank">
                         <img src="./imgs/ipaperclip.ico" alt="">
                         <h3>回形针百科</h3>
-                        <p>找不到更合适的了</p>
+                        <p>当代生活百科全书</p>
+                      </a>
+                    </div>
+                  </div>
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:jumpa('https://baike.baidu.com/museum/')" target="_blank">
+                        <img src="./imgs/baidu.png" alt="">
+                        <h3>百度博物馆计划</h3>
+                        <p>在线欣赏海量物品</p>
                       </a>
                     </div>
                   </div>
                   </div>
                 </div>
               </div>
-			  <div class="part" id="other" data-title="在线游戏">
+			  <div class="part" id="other" data-title="其他有用">
+              <h2 class="has_link ">
+                <strong>其他有用</strong></h2>
+              <div class="items ">
+                <div class="row">
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:jumpa('https://xiaogan.ga/index.php?r=index/wap')" target="_blank">
+                        <img src="./imgs/taobao.png" alt="">
+                        <h3>品牌一折限时特卖</h3>
+                        <p>淘宝大额隐藏优惠券</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:jumpa('https://www.allhistory.com/')" target="_blank">
+                        <img src="./imgs/allhistory.png" alt="">
+                        <h3>全历史</h3>
+                        <p>猛一看真的很全</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+			<div class="part" id="other" data-title="在线游戏">
               <h2 class="has_link ">
                 <strong>在线游戏（首次访问略慢）</strong></h2>
               <div class="items ">
@@ -316,15 +352,6 @@
                       </a>
                     </div>
                   </div>
-				  <!--<div class="col-xs-6 col-sm-4 col-md-2">
-                    <div class="item">
-                      <a onclick="javascript:jumpa('https://nodie.xiaogan.ga/index.html')" target="_blank">
-                        <img src="./imgs/nodie.png" alt="">
-                        <h3>浪费时光小游戏</h3>
-                        <p>内置了好多好多的小游戏</p>
-                      </a>
-                    </div>
-                  </div>-->
 				  <div class="col-xs-6 col-sm-4 col-md-2">
                     <div class="item">
                       <a onclick="javascript:jumpa('https://nodie.xiaogan.ga/nodie/index.html')" target="_blank">
@@ -361,15 +388,6 @@
                       </a>
                     </div>
                   </div>
-				  <!--<div class="col-xs-6 col-sm-4 col-md-2">
-                    <div class="item">
-                      <a onclick="javascript:jumpa('http://ggg.gaofushuaiba.cn/minigame/endlesslake/')" target="_blank">
-                        <img src="" alt="">
-                        <h3>无尽之湖</h3>
-                        <p>我的脑子玩不转。。</p>
-                      </a>
-                    </div>
-                  </div>-->
 				  <div class="col-xs-6 col-sm-4 col-md-2">
                     <div class="item">
                       <a onclick="javascript:jumpa('https://nodie.xiaogan.ga/jiguang/index.html')" target="_blank">
@@ -394,62 +412,6 @@
                         <img src="./imgs/crazy-balls.jpg" alt="">
                         <h3>疯狂的球</h3>
                         <p>休闲小游戏</p>
-                      </a>
-                    </div>
-                  </div>
-				  <!--
-                  <div class="col-xs-6 col-sm-4 col-md-2">
-                    <div class="item">
-                      <a onclick="javascript:jumpa('https://m.shtoss.com/game/color-bump-online/index.html')" target="_blank">
-                        <img src="./imgs/color-bump-online.jpg" alt="">
-                        <h3>彩色球碰撞</h3>
-                        <p>自己只能拱同类颜色的物体</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-xs-6 col-sm-4 col-md-2">
-                    <div class="item">
-                      <a onclick="javascript:jumpa('https://m.shtoss.com/game/stack-online/index.html')" target="_blank">
-                        <img src="./imgs/stack-online.jpg" alt="">
-                        <h3>叠叠乐</h3>
-                        <p>你能堆多高?</p>
-                      </a>
-                    </div>
-                  </div>
-				  
-                  <div class="col-xs-6 col-sm-4 col-md-2">
-                    <div class="item">
-                      <a onclick="javascript:jumpa('https://m.shtoss.com/game/rush-box/index.html')" target="_blank">
-                        <img src="./imgs/rush-box.jpg" alt="">
-                        <h3>黑白变换</h3>
-                        <p>我认为这游戏很难，难在失败重开</p>
-                      </a>
-                    </div>
-                  </div>
-				 -->
-                </div>
-              </div>
-            </div>
-			  <div class="part" id="other" data-title="其他有用">
-              <h2 class="has_link ">
-                <strong>其他有用</strong></h2>
-              <div class="items ">
-                <div class="row">
-				  <div class="col-xs-6 col-sm-4 col-md-2">
-                    <div class="item">
-                      <a onclick="javascript:jumpa('https://xiaogan.ga/index.php?r=index/wap')" target="_blank">
-                        <img src="./imgs/taobao.png" alt="">
-                        <h3>品牌一折限时特卖</h3>
-                        <p>淘宝大额隐藏优惠券</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-xs-6 col-sm-4 col-md-2">
-                    <div class="item">
-                      <a onclick="javascript:jumpa('https://www.allhistory.com/')" target="_blank">
-                        <img src="./imgs/allhistory.png" alt="">
-                        <h3>全历史</h3>
-                        <p>猛一看真的很全</p>
                       </a>
                     </div>
                   </div>
@@ -522,8 +484,7 @@ function jumpa(keyword)
 	}
 }
 
-//tips = ['<font color=red>播放频繁加载？在疑难解答中了解“高速加载”</color>','<font color=red>播放频繁加载？在疑难解答中了解“高速加载”</color>','页面底部内容看不见？在疑难解答中了解“浏览器全屏”','用着还不错？那就在“更多精彩”中分享给朋友吧','<font color=red>请勿相信非官方页面中的任何广告</color>'];
-tips = ['<a href="http://mskt.hner.cn/1.html">推迟开学不停学 打赢抗疫阻击战!</a>'];
+tips = ['<font color=red>播放频繁加载？在疑难解答中了解“高速加载”</color>','<a href="http://mskt.hner.cn/1.html">推迟开学不停学 打赢抗疫阻击战!</a>','页面底部内容看不见？在疑难解答中了解“浏览器全屏”','用着还不错？那就在“更多精彩”中分享给朋友吧','<font color=red>请勿相信非官方页面中的任何广告</color>',''];
 tipspan = document.getElementById("tips");
 tipspan.innerHTML = tips[Math.floor(Math.random()*tips.length)];
 </script>
