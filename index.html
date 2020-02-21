@@ -484,7 +484,7 @@ function jumpa(keyword)
 	}
 }
 
-tips = ['<font color=red>播放频繁加载？在疑难解答中了解“高速加载”</color>','<a href="http://mskt.hner.cn/1.html">推迟开学不停学 打赢抗疫阻击战!</a>','页面底部内容看不见？在疑难解答中了解“浏览器全屏”','用着还不错？那就在“更多精彩”中分享给朋友吧','<font color=red>请勿相信非官方页面中的任何广告</color>'];
+tips = ['<font color=red>播放频繁加载？在疑难解答中了解“高速加载”</color>','<a onclick="javascript:jumpa(\'http://mskt.hner.cn/\')">点此进入名校同步课堂，投屏看!（hner.cn）</a>','页面底部内容看不见？在疑难解答中了解“浏览器全屏”','<font color=red>请勿相信非官方页面中的任何广告</color>'];
 tipspan = document.getElementById("tips");
 tipspan.innerHTML = tips[Math.floor(Math.random()*tips.length)];
 </script>
