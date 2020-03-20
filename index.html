@@ -13,7 +13,7 @@
 	@font-face { font-family: 'rbicon'; src: url(chrome-extension://dipiagiiohfljcicegpgffpbnjmgjcnf/fonts/rbicon.woff2) format("woff2"); font-weight: normal; font-style: normal; } ::-webkit-input-placeholder { /* WebKit, Blink, Edge */ color: #495057; } :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #495057; } ::-moz-placeholder { /* Mozilla Firefox 19+ */ color: #495057; } :-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #495057; }
 	
 	.scimg{
-	width: 80%;
+	width: 70%;
 	}
 	
 	.sctd{
@@ -34,6 +34,7 @@
             <li> 搜索 </li>
             <li data-target="ler-search" class="current"><span>搜影视</span></li>
             <li data-target="baidu-search"><span>搜全网</span></li>
+			<li data-target="taobao-search"><span>搜淘宝商品优惠券</span></li>
           </ul>
           <div class="cont">
             <div class="left-cont">
@@ -45,12 +46,16 @@
               </form>
 			  -->
 			  <form class="search" id="ler-search" action="http://www.aiaike.com/search" method="get" target="_blank">
-                <input type="text" name="wd" class="s" placeholder="输入你想看的影视 / 电视剧名">
+                <input type="text" name="wd" class="s" placeholder="输入你想看的影视名 或 电视剧名">
                 <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜影视</button>
               </form>
               <form class="search hidden" id="baidu-search" action="https://www.baidu.com/s" onsubmit="return checkit()"  method="get" target="_blank">
-                <input type="text" id="keyword" name="wd" class="s" placeholder="输入影视 + 在线观看 / 粘贴链接可转到">
+                <input type="text" id="keyword" name="wd" class="s" placeholder="输入影视 + 在线观看 或 粘贴链接可转到">
                 <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜全网</button>
+              </form>
+			  <form class="search hidden" id="taobao-search" action="http://xiaogan.ga/?r=wap#/search"  method="get" target="_blank">
+                <input type="text" id="keyword" name="keyWords" class="s" placeholder="输入一个商品名 或 粘贴宝贝标题">
+                <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜索</button>
               </form>
             </div>
           </div>
@@ -490,7 +495,7 @@
               </div>
             </div>
           </div>
-		  <div style="padding:10px;margin-bottom:20px;"><script type="text/javascript" charset="UTF-8" src="https://apimall.dataoke.com/api/component/code-info/v1?comId=4403&v=1583032041" exte-id="4403" data-size="100%x40" data-color="#FF681D" data-show="1" data-txt="网购前搜索全网隐藏优惠券更省钱！"></script></div>
+		  <!--<div style="padding:10px;margin-bottom:20px;"><script type="text/javascript" charset="UTF-8" src="https://apimall.dataoke.com/api/component/code-info/v1?comId=4403&v=1583032041" exte-id="4403" data-size="100%x40" data-color="#FF681D" data-show="1" data-txt="网购前搜索全网隐藏优惠券更省钱！"></script></div>-->
         </div>
       </div>
     </div>
