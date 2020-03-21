@@ -45,15 +45,15 @@
                 <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜影视</button>
               </form>
 			  -->
-			  <form class="search" id="ler-search" action="http://www.aiaike.com/search" method="get">
-                <input type="text" name="wd" class="s" placeholder="输入你想看的影视名 或 电视剧名">
+			  <form class="search" id="ler-search" action="http://www.aiaike.com/search" onsubmit="return searchmovice()" method="get" target="_blank">
+                <input type="text" id="movicekeyword" name="wd" class="s" placeholder="输入你想看的影视名 或 电视剧名">
                 <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜影视</button>
               </form>
-              <form class="search hidden" id="baidu-search" action="https://www.baidu.com/s" onsubmit="return checkit()"  method="get">
+              <form class="search hidden" id="baidu-search" action="https://www.baidu.com/s" onsubmit="return checkit()"  method="get" target="_blank">
                 <input type="text" id="keyword" name="wd" class="s" placeholder="输入影视 + 在线观看 或 粘贴链接可转到">
                 <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜全网</button>
               </form>
-			  <form class="search hidden" id="taobao-search" action="http://xiaogan.ga/?r=wap#/search" onsubmit="return search_tao()" method="get">
+			  <form class="search hidden" id="taobao-search" action="http://xiaogan.ga/?r=wap#/search" onsubmit="return search_tao()" method="get" target="_blank">
                 <input type="text" id="taokeyword" name="keyWords" class="s" placeholder="输入一个商品名 或 粘贴宝贝标题">
                 <button type="submit" name="aaa" class="btn" style="background-color:#868e9666">搜索</button>
               </form>
@@ -574,6 +574,13 @@ function search_tao()
 {
 	search = document.getElementById("taokeyword").value;
 	jumpa("http://xiaogan.ga/?r=wap#/search?keyWords=" + encodeURI(search));
+	return false;
+}
+
+function searchmovice()
+{
+	search = document.getElementById("movicekeyword").value;
+	jumpa("http://www.aiaiaike.com/search?wd=" + encodeURI(search));
 	return false;
 }
 
