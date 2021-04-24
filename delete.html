@@ -32,13 +32,42 @@
         <div class="primary-menus">
           <ul class="selects">
             <li> 搜索 </li>
-            <li data-target="baidu-search"><span>百度搜索</span></li>
+            <li data-target="ler-search" class="current"><span>搜影视</span></li>
+            <li data-target="baidu-search"><span>搜全网</span></li>
+			<li data-target="taobao-search"><span>搜淘宝商品优惠券</span></li>
           </ul>
           <div class="cont">
             <div class="left-cont">
-              <form class="search" id="baidu-search" action="https://www.baidu.com/s" onsubmit="return checkit()"  method="get" target="_blank">
-                <input type="text" id="search" name="wd" class="s" placeholder="输入关键词搜索 或 粘贴链接转到">
-                <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜索</button>
+			  <!--
+              <form class="search" id="ler-search" action="https://m.fenggoudy.com/index.php" method="get" target="_blank">
+                <input type="text" name="wd" class="s" placeholder="输入你想看的影视 / 电视剧名">
+				<input type="hidden" name="s" value="vod-search-name"/>
+                <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜影视</button>
+              </form>
+			  -->
+			  <!--
+			  <form class="search" id="ler-search" action="http://www.aiaike.com/search" onsubmit="return searchmovice()" method="get" target="_blank">
+                <input type="text" id="movicekeyword" name="wd" class="s" placeholder="输入你想看的影视名 或 电视剧名">
+                <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜影视</button>
+              </form>
+			  -->
+			  <!--
+			  <form class="search" id="ler-search" action="https://www.laodouban.com/s"  method="get" target="_blank">
+                <input type="text" id="keyword" name="c" class="s" placeholder="输入你想看的影视名 或 电视剧名">
+                <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜影视</button>
+              </form>
+			  -->
+			  <form class="search" id="ler-search" accept-charset="UTF-8" action="https://www.pianku.li/s/go.php?" method="get">
+				<input type="text" name="q" id="keyword" class="s" placeholder="输入你想看的影视名 或 电视剧名">
+                <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜影视</button>
+			  </form>
+              <form class="search hidden" id="baidu-search" action="https://www.baidu.com/s" onsubmit="return checkit()"  method="get" target="_blank">
+                <input type="text" id="search" name="wd" class="s" placeholder="输入影视 + 在线观看 或 粘贴链接可转到">
+                <button type="submit" name="submit" class="btn" style="background-color:#868e9666">搜全网</button>
+              </form>
+			  <form class="search hidden" id="taobao-search" action="http://xiaogan.ga/?r=wap#/search" onsubmit="return search_tao()" method="get" target="_blank">
+                <input type="text" id="taokeyword" name="keyWords" class="s" placeholder="输入一个商品名 或 粘贴宝贝标题">
+                <button type="submit" name="aaa" class="btn" style="background-color:#868e9666">搜索</button>
               </form>
             </div>
           </div>
@@ -65,7 +94,9 @@
                 <dt style="top: 7px;">
                   <span class="show-list"></span>
                 </dt>
-				<dd class="current">
+                <dd class="current">
+                  <a href="#hot" class="auto-scroll" data-offset="-20" data-speed="500">影音大全</a></dd>
+				<dd>
                   <a href="#study" class="auto-scroll" data-offset="-20" data-speed="500">视频精选</a></dd>
                 <dd>
                   <a href="#othermv" class="auto-scroll" data-offset="-20" data-speed="500">其他娱乐</a></dd>
@@ -76,7 +107,160 @@
               </dl>
             </div>
           </div>
+          <!--
+		  <table style="text-align: center;padding: 10px;">
+			<tbody>
+				<tr>
+					<td class="sctd"><a href="http://xiaogan.ga/?r=wap#/halfPrice"><img class="scimg" src="https://sr.ffquan.com/bx/ef2fe2450658df68782676ad9a0b5094.png" /></a></td>
+					<td class="sctd"><a href="http://xiaogan.ga/?r=wap#/mlym"><img class="scimg" src="https://sr.ffquan.com/bx/2f3c8ba949742e2641d04de1adc9461f.png" /></a></td>
+					<td class="sctd"><a href="http://xiaogan.ga/?r=wap#/rushingRanking"><img class="scimg" src="https://sr.ffquan.com/bx/d68a6bd8bb56d22dc12cbcd4333353c9.png" /></a></td>
+					<td class="sctd"><a href="http://xiaogan.ga/?r=wap#/superDiscount"><img class="scimg" src="https://sr.ffquan.com/bx/2d8a0339dd28fcac3b9bf2bf2d69b9b7.png" /></a></td>
+					<td class="sctd"><a href="http://xiaogan.ga/?r=wap#/ddq"><img class="scimg" src="https://sr.ffquan.com/bx/140a8c93e39edf8268f0971862a2a6f8.png" /></a></td>
+					
+				</tr>
+				<tr>
+					<td class="sctd"><a class="sca" href="http://xiaogan.ga/?r=wap#/halfPrice">每日半价</a></td>
+					<td class="sctd"><a class="sca" href="http://xiaogan.ga/?r=wap#/mlym">买了又买</a></td>
+					<td class="sctd"><a class="sca" href="http://xiaogan.ga/?r=wap#/rushingRanking">疯抢榜</a></td>
+					<td class="sctd"><a class="sca" href="http://xiaogan.ga/?r=wap#/superDiscount">折上折</a></td>
+					<td class="sctd"><a class="sca" href="http://xiaogan.ga/?r=wap#/ddq">咚咚抢</a></td>
+				</tr>
+			</tbody>
+		  </table>
+		  -->
+		  			<!-- 智能橱窗 -->
+			<div><script type="text/javascript" charset="UTF-8" src="https://apimall.dataoke.com/api/component/code-info/v1?comId=1058&type=2&v=1589945208" exte-id="1058" data-size="100%_50vw" data-color="#FF3B32" data-bodycolor="#fff" data-opacity="100" data-show="1"></script></div>
           <div class="col-md-11">
+            <div class="part current" id="hot" data-title="影音大全">
+              <h2 class="has_link ">
+                <strong>影音大全</strong></h2>
+              <div class="items ">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="https://z1.m1907.cn/" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/kkkkmao.ico" alt="">
+                        <h3>超强影视搜索1</h3>
+                        <p>部分加载慢，请使用高速加载</p>
+					  </a>
+                    </div>
+                  </div>
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="https://ler.app/so.php" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/kkkkmao.ico" alt="">
+                        <h3>超强影视搜索2</h3>
+                        <p>加载慢，请使用高速加载</p>
+					  </a>
+                    </div>
+                  </div>
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="https://www.laodouban.com/" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/kkkkmao.ico" alt="">
+                        <h3>老豆瓣</h3>
+                        <p>上面搜不到的，点我进来搜一下</p>
+					  </a>
+                    </div>
+                  </div>
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="http://tv.cctv.com/m/" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/cctv.ico" alt="">
+                        <h3>CCTV</h3>
+                        <p>电视剧、纪实、中央节目</p>
+                      </a>
+                    </div>
+                  </div>
+				  <!--<div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="http://xiaogan.ga/msg/index.php?c=guestbook&a=index&id=5" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/hot.png" alt="">
+                        <h3>随意留言吧</h3>
+                        <p>偶尔分享一些信息，常来看看。</p>
+                      </a>
+                    </div>
+                  </div>
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="https://tophub.today/" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/hot.png" alt="">
+                        <h3>今日热榜</h3>
+                        <p>聚合今日全网热门话题</p>
+                      </a>
+                    </div>
+                  </div>-->
+				  <!--
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="https://www.meiju11.com/new/" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/kanmeiju.ico" alt="">
+                        <h3>看美剧</h3>
+                        <p>要看美剧请进!（加载快）</p>
+                      </a>
+                    </div>
+                  </div>
+				  -->
+				  <!--
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="https://www.laodouban.com/" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/kkkkmao.ico" alt="">
+                        <h3>免费观影（三）</h3>
+                        <p>线路多，选个快的吧</p>
+                      </a>
+                    </div>
+                  </div>
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="http://www.kk2w.cc" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/kkkkmao.ico" alt="">
+                        <h3>免费观影（四）</h3>
+                        <p>热门电影、电视剧（备用）</p>
+                      </a>
+                    </div>
+                  </div>
+				  
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="http://www.aiaike.com/" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/kkkkmao.ico" alt="">
+                        <h3>爱爱客</h3>
+                        <p>有时不稳定，部分加载快</p>
+                      </a>
+                    </div>
+                  </div>
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="https://ler.app/so.php" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/ler.ico" alt="">
+                        <h3>乐影网</h3>
+                        <p>加载慢，可使用高速加载</p>
+                      </a>
+                    </div>
+                  </div>
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="https://m.fenggoudy.com" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/kkkkmao.ico" alt="">
+                        <h3>免费高速观影</h3>
+                        <p>适合晚上和投屏看，勿信广告</p>
+                      </a>
+                    </div>
+                  </div>
+				  -->
+                </div>
+              </div>
+            </div>
+			<!--
+            <div style="text-align:center;color:#495057;">
+				
+				<h3 style="margin-bottom:10px;">大家都在抢</h3>
+                <script type="text/javascript"  charset="UTF-8" src="https://apimall.dataoke.com/api/component/code-info/v1?comId=4834&v=1586136739" exte-id="4834" data-size="100%_45vw" data-color="#538CFD" data-bodycolor="#fff" data-opacity="100" data-show="1"></script>
+				
+				<a style="margin-bottom:20px;display:block;" onclick="javascript:pushinfo(this)" href="http://t.cn/A6wrWTTg" rel="noopener noreferrer" target="_blank">拼多多员工内购商品>></a>
+			</div>
+			-->
 			<div class="part" id="study" data-title="视频精选">
               <h2 class="has_link ">
                 <strong>视频精选</strong></h2>
@@ -192,6 +376,15 @@
                   </div>
 				  <div class="col-xs-6 col-sm-4 col-md-2">
                     <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="http://tongzhong.xyz/" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/tongzhong.ico" alt="">
+                        <h3>三网合一听音乐</h3>
+                        <p>聚合QQ音乐、网易云音乐和虾米音乐</p>
+                      </a>
+                    </div>
+                  </div>
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
                       <a onclick="javascript:pushinfo(this)" href="http://www.jlpcn.net/wap/" rel="noopener noreferrer" target="_blank">
                         <img src="./imgs/hner.ico" alt="">
                         <h3>纪录片天地</h3>
@@ -207,6 +400,15 @@
                 <strong>其他有用</strong></h2>
               <div class="items ">
                 <div class="row">
+				  <div class="col-xs-6 col-sm-4 col-md-2">
+                    <div class="item">
+                      <a onclick="javascript:pushinfo(this)" href="http://xiaogan.ga/?r=wap#/" rel="noopener noreferrer" target="_blank">
+                        <img src="./imgs/taobao.png" alt="">
+                        <h3>淘宝大额优惠券</h3>
+                        <p>猛一看真的很大</p>
+                      </a>
+                    </div>
+                  </div>
                   <div class="col-xs-6 col-sm-4 col-md-2">
                     <div class="item">
                       <a onclick="javascript:pushinfo(this)" href="https://www.allhistory.com/" rel="noopener noreferrer" target="_blank">
@@ -336,6 +538,7 @@
               </div>
             </div>
           </div>
+		  <!--<div style="padding:10px;margin-bottom:20px;"><script type="text/javascript" charset="UTF-8" src="https://apimall.dataoke.com/api/component/code-info/v1?comId=4403&v=1583032041" exte-id="4403" data-size="100%x40" data-color="#FF681D" data-show="1" data-txt="网购前搜索全网隐藏优惠券更省钱！"></script></div>-->
         </div>
       </div>
     </div>
@@ -424,7 +627,7 @@ function searchmovice()
 	return false;
 }
 
-tips = ['<font color=red>播放频繁加载？在疑难解答中了解“高速加载”</color>','<font color=red>播放失败或卡慢？请换个“云”（线路）吧</color>','<font color=red>请勿轻信“非官方页面”中的任何广告</color>','<font color=red>把你喜欢的网站加入收藏吧！</color>'];
+tips = ['<font color=red>播放频繁加载？在疑难解答中了解“高速加载”</color>','<font color=red>播放失败或卡慢？请换个“云”（线路）吧</color>','<font color=red>请勿相信“非官方页面”中的任何广告</color>','<font color=red>把你喜欢的网站加入收藏吧！</color>'];
 tipspan = document.getElementById("tips");
 tipspan.innerHTML = tips[Math.floor(Math.random()*tips.length)];
 </script>
